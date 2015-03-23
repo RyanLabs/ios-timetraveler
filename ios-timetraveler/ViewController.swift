@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var dateSlider: UISlider!
+    @IBOutlet weak var currentPercentValue: UILabel!
+    @IBOutlet weak var currentDateValue: UILabel!
+    @IBOutlet weak var whatHappened: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

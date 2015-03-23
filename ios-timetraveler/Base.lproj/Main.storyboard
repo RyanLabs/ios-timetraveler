@@ -114,9 +114,6 @@
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-Zr-XgT">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="285" width="372" height="31"/>
-                                </variation>
                                 <connections>
                                     <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="CQJ-nS-gG4"/>
                                 </connections>
@@ -124,12 +121,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="SLw-Zr-XgT" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="Ux0-Sa-L4A"/>
                             <constraint firstAttribute="centerX" secondItem="97J-jy-TES" secondAttribute="centerX" id="bvR-1b-azD"/>
                             <constraint firstAttribute="centerY" secondItem="97J-jy-TES" secondAttribute="centerY" id="dkV-fj-9Y3"/>
                             <constraint firstAttribute="centerY" secondItem="97J-jy-TES" secondAttribute="centerY" constant="149.5" id="fDb-P6-Yz7">
                                 <variation key="widthClass=compact" constant="217.5"/>
                             </constraint>
                             <constraint firstItem="97J-jy-TES" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="nKI-EA-0kr"/>
+                            <constraint firstAttribute="centerY" secondItem="SLw-Zr-XgT" secondAttribute="centerY" id="tXq-pK-nhL"/>
+                            <constraint firstAttribute="centerX" secondItem="SLw-Zr-XgT" secondAttribute="centerX" id="xZi-j6-7X1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -141,6 +141,9 @@
                                 <exclude reference="dkV-fj-9Y3"/>
                                 <exclude reference="fDb-P6-Yz7"/>
                                 <exclude reference="nKI-EA-0kr"/>
+                                <exclude reference="Ux0-Sa-L4A"/>
+                                <exclude reference="tXq-pK-nhL"/>
+                                <exclude reference="xZi-j6-7X1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -153,11 +156,17 @@
                                 <exclude reference="dkV-fj-9Y3"/>
                                 <include reference="fDb-P6-Yz7"/>
                                 <include reference="nKI-EA-0kr"/>
+                                <include reference="Ux0-Sa-L4A"/>
+                                <include reference="tXq-pK-nhL"/>
+                                <include reference="xZi-j6-7X1"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentDateValue" destination="IJ7-kB-HcR" id="qLi-er-hcL"/>
+                        <outlet property="currentPercentValue" destination="3ue-gt-Gmf" id="1Rs-PX-HEu"/>
                         <outlet property="dateSlider" destination="SLw-Zr-XgT" id="rJ7-xf-OdD"/>
+                        <outlet property="whatHappened" destination="6ia-Vi-6vf" id="EAR-eH-unV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
